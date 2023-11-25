@@ -7,9 +7,9 @@ ba.createAccount('Huy', '123', 2000, 'Credit')
 ba.createAccount('Hoang', '123', 1000, 'CASA')
 ba.createAccount('Hoang', '123', 2000, 'Credit')
 # ba.open_account()
-# ba.withdraw()
-# ba.show_all_account()
-ba.show()
+ba.withdraw()
+ba.show_all_account()
+# ba.show()
 
 
 # a = {}

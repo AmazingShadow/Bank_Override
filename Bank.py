@@ -143,7 +143,11 @@ class Bank():
                 if self.accountsDict.get(account_name)[i].password == pw:
                     print(f"pw ok!")
                     money = int(input('insert the withdraw amount: '))
-                    self.accountsDict.get(account_name)[i].balance -=  money
+                    balance = self.accountsDict.get(account_name)[i].balance
+                    if money > self.accountsDict.get(account_name)[i].balance:
+                        print('Your balance is not enought')
+                        break
+                    self.accountsDict.get(account_name)[i].balance -= money
                     print(f"withdraw of {money} done!")
                     break
                 else:
