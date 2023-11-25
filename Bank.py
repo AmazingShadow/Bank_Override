@@ -72,10 +72,13 @@ class Bank():
                     if balance > 0:
                         print(f"You had {balance} in your bank account wich they will return to you")
                     self.accountsDict.get(account_name).pop(i)
+                    if (len(self.accountsDict.get(account_name)) == 0): self.accountsDict.pop(account_name)
                     break
                 else:
                     print("wrong password\nprogram ended")
                     break
+
+        print('You dont have this account')
 
     def balance(self):
         '''it shows the balance of a single account'''
@@ -100,6 +103,7 @@ class Bank():
                 else:
                     print("wrong password\nprogram ended")
                     break
+        print('You dont have this account')
 
     def deposit(self):
         '''deposit in the account'''
@@ -125,6 +129,7 @@ class Bank():
                 else:
                     print("wrong password\nprogram ended")
                     break
+        print('You dont have this account')
 
     def withdraw(self):
         '''withdraw '''
@@ -153,6 +158,7 @@ class Bank():
                 else:
                     print("wrong password\nprogram ended")
                     break
+        print('You dont have this account')
     
     def show(self):
         '''show the info of a specific account: num, name, funds'''
@@ -178,6 +184,7 @@ class Bank():
                 else:
                     print("wrong password\nprogram ended")
                     break
+        print('You dont have this account')
 
     def show_all_account(self):
         '''for debug/admin'''
